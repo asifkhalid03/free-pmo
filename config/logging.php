@@ -34,6 +34,17 @@ return [
     */
 
     'channels' => [
+
+        'vapor' => [
+            'driver' => 'stack',
+            'channels' => ['flare', 'stderr'],
+            'ignore_exceptions' => false,
+        ],
+
+        'flare' => [
+            'driver' => 'flare',
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['daily'],

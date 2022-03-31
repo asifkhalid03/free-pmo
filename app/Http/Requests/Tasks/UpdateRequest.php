@@ -27,7 +27,7 @@ class UpdateRequest extends Request
     {
         return [
             'name'        => 'required|max:60',
-            'description' => 'nullable|max:255',
+            'description' => 'nullable',
             'progress'    => 'required|numeric|max:100',
             'job_id'      => 'required|numeric|exists:jobs,id',
         ];

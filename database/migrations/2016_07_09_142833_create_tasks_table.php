@@ -16,7 +16,7 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             $table->integer('job_id')->unsigned();
             $table->string('name', 60);
-            $table->string('description')->nullable();
+            $table->LongText('description')->nullable();
             $table->unsignedTinyInteger('progress')->default(0);
             $table->unsignedTinyInteger('position')->default(0);
             $table->timestamps();

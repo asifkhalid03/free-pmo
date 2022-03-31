@@ -38,3 +38,7 @@ Route::group(['middleware' => ['role:admin']], function () {
      */
     Route::apiResource('vendors', 'Partners\VendorsController');
 });
+
+Route::get('/foo', function () {
+   dd(Artisan::call('storage:link'));
+});

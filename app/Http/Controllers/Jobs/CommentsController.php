@@ -41,7 +41,7 @@ class CommentsController extends Controller
         $this->authorize('comment-on', $job);
 
         $newComment = $request->validate([
-            'body' => 'required|string|max:255',
+            'body' => 'required',
         ]);
 
         $job->comments()->create([
@@ -67,7 +67,7 @@ class CommentsController extends Controller
         $this->authorize('update', $comment);
 
         $commentData = $request->validate([
-            'body' => 'required|string|max:255',
+            'body' => 'required',
         ]);
         $comment->update($commentData);
         flash(__('comment.updated'), 'success');

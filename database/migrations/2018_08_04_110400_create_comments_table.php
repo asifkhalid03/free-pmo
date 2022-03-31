@@ -17,7 +17,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->string('commentable_type');
             $table->unsignedInteger('commentable_id');
-            $table->string('body');
+            $table->LongText('body');
             $table->unsignedInteger('creator_id');
             $table->timestamps();
         });
